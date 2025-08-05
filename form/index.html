@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <form action="" method="get">
+            <fieldset>
+                <legend> Personal Unfrommation</legend>
+
+                <label for="FirstName">FirstName</label>
+                <input type="text" name="firstName" id="FirstName" required>
+
+                <label for="listName">ListName</label>
+                <input type="text" name="listName" minlength="2" required>
+
+                <label for="Email">Emeil</label>
+                <input type="email" name="Email" id="Email" required>
+
+                <label for="Phon">Phon</label>
+                <input type="tel" minlength="10" maxlength="10">
+            </fieldset>
+
+            <fieldset>
+                <legend>Ticket & Workshops</legend>
+
+                <label for="ticketType">Ticket Type:</label>
+                <select id="ticketType" name="ticketType" required>
+                    <option value="regular">Regular</option>
+                    <option value="vip">VIP</option>
+                    <option value="student">Student</option>
+                </select>
+                <br><br>
+
+                <p>Workshops:</p>
+                <input type="checkbox" id="workshop1" name="workshops" value="Web Performance">
+                <label for="workshop1">Web Performance</label><br>
+
+                <input type="checkbox" id="workshop2" name="workshops" value="Accessibility">
+                <label for="workshop2">Accessibility</label><br>
+
+                <input type="checkbox" id="workshop3" name="workshops" value="Testing">
+                <label for="workshop3">Testing</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Payment Details</legend>
+
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" name="cardNumber" inputmode="numeric" pattern="[0-9\s]{13,19}"
+                    required>
+
+                <label for="expiryDate">Expiry Date:</label>
+                <input type="month" id="expiryDate" name="expiryDate" required>
+
+                <label for="cvv">CVV:</label>
+                <input type="password" id="cvv" name="cvv" maxlength="3" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Agreements</legend>
+
+                <div id="studentIdUploadDiv" class="hidden">
+                    <label for="studentId">Upload Student ID (PDF, JPG, PNG):</label>
+                    <input type="file" id="studentId" name="studentId" accept=".pdf,.jpg,.jpeg,.png">
+                </div>
+
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the Terms and Conditions</label>
+            </fieldset>
+
+            <button type="submit">Register</button>
+        </form>
+    </main>
+</body>
+</html>
